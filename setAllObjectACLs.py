@@ -4,23 +4,23 @@ import getopt
 
 # Globals
 BucketName = ''
-Env = ''
 ProfileName = 'default'
 NewACL = 'authenticated-read'
 
 # Parse CL opts
-opts, args = getopt.getopt(sys.argv[1:],'he:b:p:a:')
+opts, args = getopt.getopt(sys.argv[1:],'hb:p:a:')
 for opt, arg in opts:
     if opt == '-h':
-        print '-e envname'
         print '-b bucketname'
         print '-p profile name'
         print '-a ACL (authenticated-read)'
         sys.exit(0)
-    if opt == '-e':
-        Env = str(arg)
     if opt == '-b':
         BucketName = str(arg)
+    if opt == '-p':
+        ProfileName = str(arg)
+    if opt == '-a':
+        NewACL = str(arg)
 
 # Get applicable creds
 mySession = boto3.Session(profile_name=ProfileName)

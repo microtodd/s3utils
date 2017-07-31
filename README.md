@@ -1,9 +1,10 @@
 # setAllS3ACLs
 
 ## command line options
--b bucketname
--p profile name (default is "default")
--a acl (default is "authenticated-read")
+
+ -b bucketname
+ -p profile name (default is "default")
+ -a acl (default is "authenticated-read")
 
 ## Purpose
 

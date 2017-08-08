@@ -1,6 +1,6 @@
 # s3utils
 
-Varioud utilities to do sysadmin-type things.
+Various utilities to do sysadmin-type things.
 
 ## setAllS3ACLs
 
